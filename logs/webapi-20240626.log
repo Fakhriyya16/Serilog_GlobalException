@@ -1,0 +1,97 @@
+2024-06-26 22:57:14.318 +04:00  INF  Now listening on: https://localhost:7242
+2024-06-26 22:57:14.371 +04:00  INF  Now listening on: http://localhost:5188
+2024-06-26 22:57:14.373 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-26 22:57:14.374 +04:00  INF  Hosting environment: Development
+2024-06-26 22:57:14.374 +04:00  INF  Content root path: D:\VS\App_API\App_API\
+2024-06-26 22:57:15.268 +04:00  INF  Request starting HTTP/2 GET https://localhost:7242/swagger/index.html - -
+2024-06-26 22:57:15.453 +04:00  INF  Request finished HTTP/2 GET https://localhost:7242/swagger/index.html - - - 200 - text/html;charset=utf-8 188.9499ms
+2024-06-26 22:57:15.472 +04:00  INF  Request starting HTTP/2 GET https://localhost:7242/_framework/aspnetcore-browser-refresh.js - -
+2024-06-26 22:57:15.474 +04:00  INF  Request finished HTTP/2 GET https://localhost:7242/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 2.1739ms
+2024-06-26 22:57:15.496 +04:00  INF  Request starting HTTP/2 GET https://localhost:7242/_vs/browserLink - -
+2024-06-26 22:57:15.532 +04:00  INF  Request finished HTTP/2 GET https://localhost:7242/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 35.8163ms
+2024-06-26 22:57:15.621 +04:00  INF  Request starting HTTP/2 GET https://localhost:7242/swagger/v1/swagger.json - -
+2024-06-26 22:57:15.694 +04:00  INF  Request finished HTTP/2 GET https://localhost:7242/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 72.8760ms
+2024-06-26 22:57:28.080 +04:00  INF  Request starting HTTP/2 GET https://localhost:7242/api/Country/GetAll - -
+2024-06-26 22:57:28.086 +04:00  INF  Executing endpoint 'App_API.Controllers.UI.CountryController.GetAll (App_API)'
+2024-06-26 22:57:28.105 +04:00  INF  Route matched with {action = "GetAll", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller App_API.Controllers.UI.CountryController (App_API).
+2024-06-26 22:57:28.732 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-26 22:57:28.807 +04:00  INF  Get All is working
+2024-06-26 22:57:29.368 +04:00  INF  Executed DbCommand (88ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreatedDate], [c].[Name], [c].[SoftDelete]
+FROM [Countries] AS [c]
+2024-06-26 22:57:29.450 +04:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Countries.CountryDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-26 22:57:29.458 +04:00  INF  Executed action App_API.Controllers.UI.CountryController.GetAll (App_API) in 1348.5875ms
+2024-06-26 22:57:29.458 +04:00  INF  Executed endpoint 'App_API.Controllers.UI.CountryController.GetAll (App_API)'
+2024-06-26 22:57:29.462 +04:00  INF  Request finished HTTP/2 GET https://localhost:7242/api/Country/GetAll - - - 200 - application/json;+charset=utf-8 1381.5705ms
+2024-06-26 23:29:44.483 +04:00  FTL  Application startup exceptionSystem.InvalidOperationException: An error occurred when configuring the exception handler middleware. Either the 'ExceptionHandlingPath' or the 'ExceptionHandler' property must be set in 'UseExceptionHandler()'. Alternatively, set one of the aforementioned properties in 'Startup.ConfigureServices' as follows: 'services.AddExceptionHandler(options => { ... });'.
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware..ctor(RequestDelegate next, ILoggerFactory loggerFactory, IOptions`1 options, DiagnosticListener diagnosticListener)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+2024-06-26 23:32:37.249 +04:00  FTL  Application startup exceptionSystem.InvalidOperationException: An error occurred when configuring the exception handler middleware. Either the 'ExceptionHandlingPath' or the 'ExceptionHandler' property must be set in 'UseExceptionHandler()'. Alternatively, set one of the aforementioned properties in 'Startup.ConfigureServices' as follows: 'services.AddExceptionHandler(options => { ... });'.
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware..ctor(RequestDelegate next, ILoggerFactory loggerFactory, IOptions`1 options, DiagnosticListener diagnosticListener)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+2024-06-26 23:32:56.930 +04:00  FTL  Application startup exceptionSystem.InvalidOperationException: An error occurred when configuring the exception handler middleware. Either the 'ExceptionHandlingPath' or the 'ExceptionHandler' property must be set in 'UseExceptionHandler()'. Alternatively, set one of the aforementioned properties in 'Startup.ConfigureServices' as follows: 'services.AddExceptionHandler(options => { ... });'.
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware..ctor(RequestDelegate next, ILoggerFactory loggerFactory, IOptions`1 options, DiagnosticListener diagnosticListener)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+2024-06-26 23:33:18.146 +04:00  FTL  Application startup exceptionSystem.InvalidOperationException: An error occurred when configuring the exception handler middleware. Either the 'ExceptionHandlingPath' or the 'ExceptionHandler' property must be set in 'UseExceptionHandler()'. Alternatively, set one of the aforementioned properties in 'Startup.ConfigureServices' as follows: 'services.AddExceptionHandler(options => { ... });'.
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware..ctor(RequestDelegate next, ILoggerFactory loggerFactory, IOptions`1 options, DiagnosticListener diagnosticListener)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+2024-06-26 23:35:03.233 +04:00  INF  Application started. Press Ctrl+C to shut down.
+2024-06-26 23:35:03.252 +04:00  INF  Request starting HTTP/2 GET https://localhost:44312/swagger/index.html - -
+2024-06-26 23:35:03.283 +04:00  INF  Hosting environment: Development
+2024-06-26 23:35:03.283 +04:00  INF  Content root path: D:\VS\App_API\App_API\
+2024-06-26 23:35:03.779 +04:00  INF  Request finished HTTP/2 GET https://localhost:44312/swagger/index.html - - - 200 - text/html;charset=utf-8 531.7187ms
+2024-06-26 23:35:03.794 +04:00  INF  Request starting HTTP/2 GET https://localhost:44312/_framework/aspnetcore-browser-refresh.js - -
+2024-06-26 23:35:03.797 +04:00  INF  Request finished HTTP/2 GET https://localhost:44312/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 3.4986ms
+2024-06-26 23:35:03.820 +04:00  INF  Request starting HTTP/2 GET https://localhost:44312/_vs/browserLink - -
+2024-06-26 23:35:03.872 +04:00  INF  Request finished HTTP/2 GET https://localhost:44312/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.8671ms
+2024-06-26 23:35:04.091 +04:00  INF  Request starting HTTP/2 GET https://localhost:44312/swagger/v1/swagger.json - -
+2024-06-26 23:35:04.169 +04:00  INF  Request finished HTTP/2 GET https://localhost:44312/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 77.7168ms
+2024-06-26 23:35:12.358 +04:00  INF  Request starting HTTP/2 POST https://localhost:44312/api/admin/City/Create application/json 60
+2024-06-26 23:35:12.370 +04:00  INF  Executing endpoint 'App_API.Controllers.Admin.CityController.Create (App_API)'
+2024-06-26 23:35:12.402 +04:00  INF  Route matched with {action = "Create", controller = "City"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Service.DTOs.Cities.CityCreateDto) on controller App_API.Controllers.Admin.CityController (App_API).
+2024-06-26 23:35:14.682 +04:00  INF  Entity Framework Core 6.0.31 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-26 23:35:21.307 +04:00  INF  Executed DbCommand (388ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreatedDate], [c].[Name], [c].[SoftDelete]
+FROM [Countries] AS [c]
+WHERE [c].[Id] = @__id_0
+2024-06-26 23:35:21.336 +04:00  WRN  Country is not found
+2024-06-26 23:35:21.345 +04:00  INF  Executed action App_API.Controllers.Admin.CityController.Create (App_API) in 8938.6858ms
+2024-06-26 23:35:21.347 +04:00  INF  Executed endpoint 'App_API.Controllers.Admin.CityController.Create (App_API)'
+2024-06-26 23:35:21.348 +04:00  ERR  Data not found
+2024-06-26 23:35:21.379 +04:00  INF  Request finished HTTP/2 POST https://localhost:44312/api/admin/City/Create application/json 60 - 404 - application/json 9020.7282ms
